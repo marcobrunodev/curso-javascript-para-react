@@ -1,0 +1,32 @@
+.player-score {
+  box-sizing: border-box;
+  width: 50px;
+  height: 20px;
+  background-color: var(--color-floral-white);
+  border: 2px solid var(--color-fiery-rose);
+  padding: 1px;
+  display: flex;
+  gap: 1px;
+}
+
+.player-score > .pointer {
+  background-color: var(--color-old-silver);
+  text-indent: -9999px;
+  overflow: hidden;
+  width: 33%;
+}
+
+.player-score[data-points="1"] > .pointer:first-child {
+  background-color: var(--color-mantis);
+}
+
+.player-score[data-points="2"] {
+  flex-direction: row-reverse;
+}
+.player-score[data-points="2"] > .pointer:nth-child(n+2) {
+  background-color: var(--color-mantis);
+}
+
+.player-score[data-points="3"] > .pointer {
+  background-color: var(--color-mantis);
+}
